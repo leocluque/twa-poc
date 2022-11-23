@@ -104,8 +104,9 @@ class MainActivity2 : AppCompatActivity() {
 
         // Example non-cors-whitelisted headers.
         val headers = Bundle()
-        headers.putString("MyCustomHeader", "Some token")
+        headers.putString("custom-header", "custom")
         intent.intent.putExtra(Browser.EXTRA_HEADERS, headers)
+
         return intent
     }
 }

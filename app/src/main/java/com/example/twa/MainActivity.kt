@@ -1,17 +1,13 @@
 package com.example.twa
 
-import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.Browser
-import android.widget.Toast
-import androidx.annotation.Nullable
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.browser.customtabs.*
+import androidx.browser.trusted.TrustedWebActivityIntent
 import com.example.twa.databinding.ActivityMainBinding
 import com.google.androidbrowserhelper.trusted.TwaLauncher
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
