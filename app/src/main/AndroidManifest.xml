@@ -9,6 +9,13 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <queries>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,8 +26,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LauncherActivity"
         tools:targetApi="31" >
+
+
         <activity
-            android:name=".MainActivity2"
+            android:name=".CustomTabsActivity2"
             android:exported="true" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -40,7 +49,7 @@
             android:resource="@string/asset_statements" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".TwaActivity"
             android:exported="true" >
 
             <!-- This intent-filter adds the Trusted Web Activity to the Android Launcher -->
@@ -74,10 +83,13 @@
                 android:value="" />
         </activity>
 
-        <activity android:name=".TwaTestActivity"
+        <activity android:name=".CustomTabsActivity"
             android:exported="true"/>
         <activity android:name=".TestCallbackTwaActivity"
             android:exported="true"/>
+
+        <activity android:name=".CustomTabsSessionActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

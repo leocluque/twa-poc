@@ -14,8 +14,8 @@ import androidx.browser.customtabs.*
 import java.util.*
 
 
-public class TwaTestActivity : AppCompatActivity() {
-    private val WEB_URL = "https://google.com"
+public class CustomTabsActivity : AppCompatActivity() {
+    private val WEB_URL = "https://ktor-twa.herokuapp.com/validateHeader"
 
     @Nullable
     private var mServiceConnection: TwaCustomTabsServiceConnection? = null
@@ -31,7 +31,7 @@ public class TwaTestActivity : AppCompatActivity() {
             "com.chrome.beta",
             "com.android.chrome"
         )
-        val chromePackage = CustomTabsClient.getPackageName(this@TwaTestActivity, packageNames, false)
+        val chromePackage = CustomTabsClient.getPackageName(this@CustomTabsActivity, packageNames, false)
         if (chromePackage == null) {
 //            TrustedWebUtils.showNoPackageToast(this)
             this.finish()
@@ -100,17 +100,17 @@ public class TwaTestActivity : AppCompatActivity() {
             componentName: ComponentName,
             client: CustomTabsClient
         ) {
-            val session: CustomTabsSession = TwaTestActivity().getSession(client)!!
-            val intent: CustomTabsIntent = TwaTestActivity().getCustomTabsIntent(session)!!
             val headers = Bundle()
-            headers.putString("bearer-token", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ1c2VycyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjgwODAiLCJleHAiOjE2OTY5NzYxNzYsInVzZXJJZCI6IjYzNDA0ZWY3ZmFhMWE5Nzc2N2Y5YzFjNSJ9.7Lvea81qGfU8O1xfkwYlZ4ch3nnUYJAEwwZHNj1zqEM")
+            headers.putString("bearer-token", "123456")
+            val session: CustomTabsSession = CustomTabsActivity().getSession(client)!!
+            val intent: CustomTabsIntent = CustomTabsActivity().getCustomTabsIntent(session)!!
             intent.intent.putExtra(Browser.EXTRA_HEADERS, headers)
-            intent.intent.putExtras(headers)
-            val url: Uri = TwaTestActivity().getLaunchingUrl()!!
+
+            val url: Uri = CustomTabsActivity().getLaunchingUrl()!!
             Log.d("TWALink", url.toString())
             // build twa
             TrustedWebUtils.launchAsTrustedWebActivity(context, intent, url)
-            TwaTestActivity().mTwaWasLaunched = true
+            CustomTabsActivity().mTwaWasLaunched = true
         }
 
         override fun onServiceDisconnected(componentName: ComponentName) {}

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context=".MainActivity">
+    tools:context=".TwaActivity">
 
     <Button
         android:id="@+id/openBtn"
@@ -30,7 +30,7 @@
         android:id="@+id/open2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open test 3!"
+        android:text="Custom tabs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openTabs" />
@@ -39,7 +39,17 @@
         android:id="@+id/open4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open test 4!"
+        android:text="Tabs Callback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open2" />
+
+    <Button
+        android:id="@+id/open5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Tabs session!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/open2" />

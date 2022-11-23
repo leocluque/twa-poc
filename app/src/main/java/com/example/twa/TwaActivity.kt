@@ -9,7 +9,7 @@ import com.example.twa.databinding.ActivityMainBinding
 import com.google.androidbrowserhelper.trusted.TwaLauncher
 
 
-class MainActivity : AppCompatActivity() {
+class TwaActivity : AppCompatActivity() {
 
 
     private val binding: ActivityMainBinding by lazy {
@@ -27,13 +27,17 @@ class MainActivity : AppCompatActivity() {
             twaLauncher.launch(Uri.parse("https://ktor-twa.herokuapp.com/"))
         }
         binding.openTabs.setOnClickListener {
-            startActivity(Intent(this, MainActivity2::class.java))
+            startActivity(Intent(this, CustomTabsActivity2::class.java))
         }
         binding.open2.setOnClickListener {
-            startActivity(Intent(this, TwaTestActivity::class.java))
+            startActivity(Intent(this, CustomTabsActivity::class.java))
         }
         binding.open4.setOnClickListener {
             startActivity(Intent(this, TestCallbackTwaActivity::class.java))
+        }
+
+        binding.open5.setOnClickListener {
+            startActivity(Intent(this, CustomTabsSessionActivity::class.java))
         }
     }
 
