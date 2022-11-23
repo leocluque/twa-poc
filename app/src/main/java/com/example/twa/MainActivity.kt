@@ -5,7 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.browser.trusted.TrustedWebActivityIntent
 import com.example.twa.databinding.ActivityMainBinding
 import com.google.androidbrowserhelper.trusted.TwaLauncher
 
@@ -29,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.openTabs.setOnClickListener {
             startActivity(Intent(this, MainActivity2::class.java))
+        }
+        binding.open2.setOnClickListener {
+            startActivity(Intent(this, TwaTestActivity::class.java))
         }
     }
 

@@ -1,6 +1,7 @@
 package com.example.twa
 
 import android.content.ComponentName
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -104,7 +105,7 @@ class MainActivity2 : AppCompatActivity() {
 
         // Example non-cors-whitelisted headers.
         val headers = Bundle()
-        headers.putString("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ1c2VycyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjgwODAiLCJleHAiOjE2OTY5NzYxNzYsInVzZXJJZCI6IjYzNDA0ZWY3ZmFhMWE5Nzc2N2Y5YzFjNSJ9.7Lvea81qGfU8O1xfkwYlZ4ch3nnUYJAEwwZHNj1zqEM")
+        headers.putString("bearer-token", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ1c2VycyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjgwODAiLCJleHAiOjE2OTY5NzYxNzYsInVzZXJJZCI6IjYzNDA0ZWY3ZmFhMWE5Nzc2N2Y5YzFjNSJ9.7Lvea81qGfU8O1xfkwYlZ4ch3nnUYJAEwwZHNj1zqEM")
         intent.intent.putExtra(Browser.EXTRA_HEADERS, headers)
 
         return intent

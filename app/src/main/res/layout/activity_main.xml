@@ -22,9 +22,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open tabs!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openBtn" />
+
+    <Button
+        android:id="@+id/open2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open test 2!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openTabs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
