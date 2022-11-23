@@ -13,7 +13,7 @@ import com.example.twa.databinding.ActivityMainBinding
 import java.util.*
 
 class MainActivity2 : AppCompatActivity() {
-    private val URL = Uri.parse("https://ktor-twa.herokuapp.com/")
+    private val URL = Uri.parse("https://ktor-twa.herokuapp.com/validateHeader")
 
     private var mSession: CustomTabsSession? = null
     private var mConnection: CustomTabsServiceConnection? = null
@@ -104,7 +104,7 @@ class MainActivity2 : AppCompatActivity() {
 
         // Example non-cors-whitelisted headers.
         val headers = Bundle()
-        headers.putString("X-Custom-Header", "custom")
+        headers.putString("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ1c2VycyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjgwODAiLCJleHAiOjE2OTY5NzYxNzYsInVzZXJJZCI6IjYzNDA0ZWY3ZmFhMWE5Nzc2N2Y5YzFjNSJ9.7Lvea81qGfU8O1xfkwYlZ4ch3nnUYJAEwwZHNj1zqEM")
         intent.intent.putExtra(Browser.EXTRA_HEADERS, headers)
 
         return intent
