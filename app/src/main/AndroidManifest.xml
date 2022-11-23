@@ -76,6 +76,8 @@
 
         <activity android:name=".TwaTestActivity"
             android:exported="true"/>
+        <activity android:name=".TestCallbackTwaActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

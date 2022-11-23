@@ -30,9 +30,18 @@
         android:id="@+id/open2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open test 2!"
+        android:text="Open test 3!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openTabs" />
+
+    <Button
+        android:id="@+id/open4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open test 4!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

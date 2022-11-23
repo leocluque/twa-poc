@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         binding.open2.setOnClickListener {
             startActivity(Intent(this, TwaTestActivity::class.java))
         }
+        binding.open4.setOnClickListener {
+            startActivity(Intent(this, TestCallbackTwaActivity::class.java))
+        }
     }
 
     private fun checkDeepLink() {
