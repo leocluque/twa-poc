@@ -8,6 +8,7 @@ import android.provider.Browser
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.browser.customtabs.*
+import com.example.twa.databinding.ActivityMain2Binding
 import com.example.twa.databinding.ActivityMainBinding
 import java.util.*
 
@@ -18,8 +19,8 @@ class MainActivity2 : AppCompatActivity() {
     private var mConnection: CustomTabsServiceConnection? = null
 
 
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
+    private val binding: ActivityMain2Binding by lazy {
+        ActivityMain2Binding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
